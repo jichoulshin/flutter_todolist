@@ -45,5 +45,9 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>SmartTask needs microphone access to add tasks using voice input.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>SmartTask needs speech recognition to convert your voice into text for task creation.</string>
 </dict>
 </plist>
