@@ -41,8 +41,6 @@ class SettingsPage extends StatelessWidget {
               if (state.notificationsEnabled) ...[
                 _buildNotificationTimePicker(context, state),
                 _buildBatteryOptimizationButton(context),
-                _buildImmediateTestButton(context),
-                _buildTestNotificationButton(context),
               ],
 
               SizedBox(height: 24.r),
@@ -251,55 +249,6 @@ class SettingsPage extends StatelessWidget {
                 ),
               );
             }
-          }
-        },
-      ),
-    );
-  }
-
-  Widget _buildImmediateTestButton(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.symmetric(horizontal: 16.r, vertical: 4.r),
-      child: ListTile(
-        leading: Icon(Icons.bolt, color: Colors.orange),
-        title: const Text('Test Immediate Notification'),
-        subtitle: const Text('Send notification NOW (no delay)'),
-        trailing: const Icon(Icons.send),
-        onTap: () async {
-          await NotificationService().sendImmediateTestNotification();
-          if (context.mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('🔔 Immediate notification sent!'),
-                duration: AppConstants.snackBarDuration,
-              ),
-            );
-          }
-        },
-      ),
-    );
-  }
-
-  Widget _buildTestNotificationButton(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.symmetric(horizontal: 16.r, vertical: 4.r),
-      child: ListTile(
-        leading: Icon(
-          Icons.notifications_active,
-          color: Theme.of(context).colorScheme.secondary,
-        ),
-        title: const Text('Test Notification'),
-        subtitle: const Text('Send a test notification in 5 seconds'),
-        trailing: const Icon(Icons.send),
-        onTap: () async {
-          await NotificationService().sendTestNotification();
-          if (context.mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('🔔 Test notification will arrive in 5 seconds!'),
-                duration: AppConstants.snackBarDuration,
-              ),
-            );
           }
         },
       ),

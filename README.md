@@ -561,21 +561,6 @@ flutter build macos --release
 
 ---
 
-## 📖 Documentation
-
-- [Test Guide](test/TEST_GUIDE.md) - Comprehensive testing documentation
-- [Notification Testing](NOTIFICATION_TESTING.md) - Notification setup and testing guide
-
----
-
-## 👨‍💻 Author
-
-**Jichoul Shin**
-
-- GitHub: [@jichoulshin](https://github.com/jichoulshin)
-
----
-
 ## 🎓 Learning Outcomes
 
 Through this project, I've demonstrated proficiency in:
@@ -591,26 +576,3 @@ Through this project, I've demonstrated proficiency in:
 - ✅ **Developer Tools**: Git, build_runner, analysis tools
 
 ---
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-<div align="center">
-
-**Made with ❤️ and Flutter**
-
-_A portfolio project showcasing modern Flutter development practices_
-
-</div>
-
-## Acknowledgments
-
-- Flutter team for the amazing framework
-- Community packages that made this project possible
-
-```
-
-```
